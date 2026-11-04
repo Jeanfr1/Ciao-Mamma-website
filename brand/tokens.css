@@ -1,0 +1,12 @@
+/* Marca Ciao Mamma! — Rosso in Movimento, modelo 2 */
+:root{
+  --ciao-pomodoro:#AC2E27;
+  --ciao-creme:#F3EAD6;
+  --ciao-basilico:#2F4A34;
+  --ciao-carbone:#181613;
+  --ciao-font-display:Barlow,Impact,sans-serif;
+  --ciao-font-text:Manrope,Arial,sans-serif;
+  --ciao-display-weight:800;
+  --ciao-display-style:italic;
+  --ciao-button-radius:5px;
+}

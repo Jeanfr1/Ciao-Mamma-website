@@ -1,0 +1,356 @@
+[
+  {
+    "path": "images/master/basil.png",
+    "classification": "generated_campaign",
+    "bytes": 1136169,
+    "sha256": "bdd1aa66e1742be95994c9194f6bb6487c250e87a8e270c2989bfb9ce364dff1",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/master/menu-stage.png",
+    "classification": "generated_campaign",
+    "bytes": 2658358,
+    "sha256": "b7e946530f415aac516a72ead27f9b361c6a58dcf7eee6db26cc42daccca544d",
+    "width": 1599,
+    "height": 984,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "images/master/mozzarella.png",
+    "classification": "generated_campaign",
+    "bytes": 514063,
+    "sha256": "991972b27102745937b734ab9aa5634dc436c5d4793636d6dbf27c78180dcfb2",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/master/pizza-main.png",
+    "classification": "generated_campaign",
+    "bytes": 2530418,
+    "sha256": "3bf3336fbe403b77b9b9db21cd5ca246e16b725b13fec8d553fd4251cfffc097",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/master/pizza-secondary.png",
+    "classification": "generated_campaign",
+    "bytes": 2903187,
+    "sha256": "be34f617541e7711fae58e9cf1bea467748208999bcdfe2e6ed813156fb7c779",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/master/pizza-slice.png",
+    "classification": "generated_campaign",
+    "bytes": 1465477,
+    "sha256": "5c2290c1ae280e013e04f278d57699d6ea4709a41241f6bf58f36b54557add06",
+    "width": 1484,
+    "height": 1060,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/master/taste-stage.png",
+    "classification": "generated_campaign",
+    "bytes": 2401033,
+    "sha256": "f8bdfe0cdf70365dd43750ffcf7532e804c398656625baf9476dbd7c77300b53",
+    "width": 1551,
+    "height": 1014,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "images/master/tomato.png",
+    "classification": "generated_campaign",
+    "bytes": 1351329,
+    "sha256": "6dd737e53fbf10b31ddb47c259c74626cb289524e8c7b8bc35c108379b080ae9",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/originals/Fachada-Original.png",
+    "classification": "documentary_user_original",
+    "bytes": 1254212,
+    "sha256": "5d11f3704685e423a365376d9594df5d764cdbdec65be0004cde43227d9bd4fa",
+    "width": 1820,
+    "height": 642,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/originals/Mesa-Pizza-Pasta-Original.png",
+    "classification": "documentary_user_original",
+    "bytes": 1590642,
+    "sha256": "988b876d0dd8dbfc70dcf5f68fe37b8976e306f88d89617b78b404b5a03adb78",
+    "width": 678,
+    "height": 1014,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "images/originals/Restaurante-Original.png",
+    "classification": "documentary_user_original",
+    "bytes": 1447815,
+    "sha256": "a4e5e63105dde061b3779548297a59ce16c449b923b22dea9609121df79d110c",
+    "width": 756,
+    "height": 1004,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "brand/Avatar-Ciao-Mamma.png",
+    "classification": "brand_asset",
+    "bytes": 26070,
+    "sha256": "82960d71178696f7700a87217c017283de2cbd6843ff4bea39247662cc473c51",
+    "width": 1024,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "brand/Avatar-Ciao-Mamma.svg",
+    "classification": "brand_asset",
+    "bytes": 15426,
+    "sha256": "7b821333b4a14cd27ab7efe0f3cc48c1fec81f0f5aaea4c40da5f5372fa52791"
+  },
+  {
+    "path": "brand/Logo-Ciao-Mamma-Creme-Transparente.png",
+    "classification": "brand_asset",
+    "bytes": 66233,
+    "sha256": "de082ba9d55e7ea200763e6efa58a143c2fdb1a9e1b70a72419f48eaebfbe547",
+    "width": 1774,
+    "height": 887,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "brand/Logo-Ciao-Mamma-Creme.svg",
+    "classification": "brand_asset",
+    "bytes": 236982,
+    "sha256": "48b69fed805c0bffa6dcb97b50273e84060834e5dca7a3b432f90bcfef16b8f0"
+  },
+  {
+    "path": "brand/Logo-Ciao-Mamma-Pomodoro-Transparente.png",
+    "classification": "brand_asset",
+    "bytes": 67329,
+    "sha256": "3a59b350ca5b5dfe9f1c898d293520ecf55efebc2228bd7d472725664fc07d53",
+    "width": 1774,
+    "height": 887,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "brand/Logo-Ciao-Mamma-Pomodoro.svg",
+    "classification": "brand_asset",
+    "bytes": 236982,
+    "sha256": "3288fbdf99d6b69d779b3553857c3282d63826e6951d4495418329a6989fcdef"
+  },
+  {
+    "path": "brand/Sinal-Folha.svg",
+    "classification": "brand_asset",
+    "bytes": 15315,
+    "sha256": "2886df5a79863bcd588f657d7c1fe6ef9bce394a9b54d19f66c0f8b04424d2cb"
+  },
+  {
+    "path": "brand/palette.json",
+    "classification": "brand_asset",
+    "bytes": 787,
+    "sha256": "86a6d47d53bfdaa298e6554832045c2c7f0bcd32b0ded66082fc7dab059995af"
+  },
+  {
+    "path": "brand/tokens.css",
+    "classification": "brand_asset",
+    "bytes": 351,
+    "sha256": "644066b054a82b105c45258cefca88c3b3da595bce772088e2d00f9d8fe9f6ac"
+  },
+  {
+    "path": "site/assets/basil.webp",
+    "classification": "production_export",
+    "bytes": 241136,
+    "sha256": "675a1a6ca4db2c8f032cac9d966087137c426bd586e2c10cd68e7baa5af7b21f",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/facade-original.webp",
+    "classification": "production_export",
+    "bytes": 117384,
+    "sha256": "bb1500293b142d567de875a858206634fafe14e17efeb93af168c979939c3d1d",
+    "width": 1820,
+    "height": 642,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/favicon.svg",
+    "classification": "production_export",
+    "bytes": 15315,
+    "sha256": "2886df5a79863bcd588f657d7c1fe6ef9bce394a9b54d19f66c0f8b04424d2cb"
+  },
+  {
+    "path": "site/assets/logo-creme.svg",
+    "classification": "production_export",
+    "bytes": 236985,
+    "sha256": "66a913f6b7b7db8c2a9f248173b5533fc80f6dc401f07418191bece6fd9eabf2"
+  },
+  {
+    "path": "site/assets/logo-pomodoro.svg",
+    "classification": "production_export",
+    "bytes": 236985,
+    "sha256": "8171a88d6ededd1661c080c94d9334179b27ba6cdd25f4f8563cfc8696127f33"
+  },
+  {
+    "path": "site/assets/menu-stage.webp",
+    "classification": "production_export",
+    "bytes": 414490,
+    "sha256": "967f39a1f4a774421fd45204d5a9d58e9b0985677ecdd3812ff1f12176fa210a",
+    "width": 1599,
+    "height": 984,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/mozzarella.webp",
+    "classification": "production_export",
+    "bytes": 99958,
+    "sha256": "45171df29bde0b4246004cbfc2de52c222eb3e04e1e94d6908489dfe259f58bd",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-main.webp",
+    "classification": "production_export",
+    "bytes": 653008,
+    "sha256": "47d06f7f677f651cea9319b18866c1da36e6ee93a71394ccbc4e7cbe8da629b9",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-secondary.webp",
+    "classification": "production_export",
+    "bytes": 747476,
+    "sha256": "669d32f9e035e75d2b19b88b806e0cf965d43cb489046e420e7fcb8a26ce3ae3",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-slice.webp",
+    "classification": "production_export",
+    "bytes": 376296,
+    "sha256": "510af41bf18c44d4a41e4c92361ad586353059f04cf1feea97761e3c47dbcac3",
+    "width": 1484,
+    "height": 1060,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/restaurant.webp",
+    "classification": "production_export",
+    "bytes": 222400,
+    "sha256": "7f1830d5c4da8f2bc403f29c236be9364652b5d94ef89422317b9b72602cfe40",
+    "width": 756,
+    "height": 1004,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/table-original.webp",
+    "classification": "production_export",
+    "bytes": 285724,
+    "sha256": "52efca8940b0bd506784c3a06abeb3c52219a5a88300ae01213b4f8c2bd3efc3",
+    "width": 678,
+    "height": 1014,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/taste-stage.webp",
+    "classification": "production_export",
+    "bytes": 316522,
+    "sha256": "14c66c3834d90223714c01eb91766ba181b711d37d933e18287e5d69b84de398",
+    "width": 1551,
+    "height": 1014,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/tomato.webp",
+    "classification": "production_export",
+    "bytes": 332426,
+    "sha256": "de0d5f9c8239c721df0ab50ffa5556e3481cf6732c3542ddaf2467a3cfab3a6b",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "references/Concept-Pizza-Apresentada.png",
+    "classification": "reference_only",
+    "bytes": 2691614,
+    "sha256": "562f2a5d7bd6152dc2cebc7174a485b97b2130ed2e19ede98f25828aafa74b2b",
+    "width": 1002,
+    "height": 1364,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "references/Concept-Poster-Rosso.png",
+    "classification": "reference_only",
+    "bytes": 1498556,
+    "sha256": "f19d1121d576b5d9d207559a72893e23d6e1278975abe1b3c127cec3a2a4c98a",
+    "width": 1014,
+    "height": 1374,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "references/Modelo-2-Referencia-de-Trabalho.png",
+    "classification": "reference_only",
+    "bytes": 2552942,
+    "sha256": "8025334fad248bb34c0a36542e6021d264f3b65ac7d4c924af95655a210c5502",
+    "width": 793,
+    "height": 1984,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "references/Referencia-Ingredientes.png",
+    "classification": "reference_only",
+    "bytes": 1860886,
+    "sha256": "6f02f517eb16fb17c62411e53fa2258514277ac006594f5436405d7f465ca548",
+    "width": 882,
+    "height": 1572,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "references/Referencia-Pizza-Camadas.png",
+    "classification": "reference_only",
+    "bytes": 2987725,
+    "sha256": "161bb1f2b54b1d7d747324c004a9ef3837cd85243ab4f7736a1aaa07a09b9cd6",
+    "width": 876,
+    "height": 1548,
+    "mode": "RGBA",
+    "alpha": true
+  }
+]

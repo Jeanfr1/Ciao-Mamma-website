@@ -1,0 +1,539 @@
+{
+  "date": "2026-11-04",
+  "scope": "static checks only",
+  "status": "PASS",
+  "checks": 105,
+  "passed": 105,
+  "failed": 0,
+  "browser_qa": "UNVERIFIED",
+  "browser_reason": "Managed preview daemon unavailable: /tmp/sites-previewd/requests does not exist. No browser rendering or interaction test completed.",
+  "publication": "not requested; not performed",
+  "current_menu": "category overview only; current full menu and prices require restaurant confirmation",
+  "results": [
+    {
+      "name": "Idioma público alemão",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Um H1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "IDs únicos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Quatro cenas na ordem aprovada",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Um fundo principal liso",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Hero 2 + corpo 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Escolha encerrada e vídeo ausente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Hospedagem local sem identidade de outro cliente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Rodapé integrado à cena de restaurante",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Texto da carta não inventa completude",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Telefone correto e sem dados de outros projetos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Endereço correto",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "JSON-LD consistente",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Referências HTML locais resolvem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Referências ARIA e alt resolvem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Links externos protegidos",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Todos os links de chamada consistentes",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Dimensões intrínsecas declaradas corretas",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Recursos CSS locais resolvem",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem runtime remoto ou dependência de CDN",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS com delimitadores equilibrados",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Três cortes diagonais alternados",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Movimento reduzido e pausa declarados",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sem scroll capturado ou vídeo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Plano compartilhado tem fallback mobile",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Pausa preserva âncora de leitura",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Aba inativa interrompe movimento",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Abas do diálogo declaradas",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Teclado e retorno de foco no diálogo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "IDs literais do JavaScript existem",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "name": "Sintaxe app.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Sintaxe content.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Oito mestres de campanha",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: menu-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: menu-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: menu-stage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: pizza-main.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: pizza-main.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: pizza-main",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: basil.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: basil.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: basil",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: pizza-slice.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: pizza-slice.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: pizza-slice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: tomato.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: tomato.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: tomato",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: taste-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: taste-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: taste-stage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: mozzarella.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: mozzarella.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: mozzarella",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: pizza-secondary.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: pizza-secondary.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: pizza-secondary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto real preservada: Restaurante-Original.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto real preservada: Mesa-Pizza-Pasta-Original.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Foto real preservada: Fachada-Original.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Recortes documentais nativos",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Logo PNG transparente: Pomodoro",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Logo PNG transparente: Creme",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: brand/Avatar-Ciao-Mamma.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: brand/Sinal-Folha.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: brand/Logo-Ciao-Mamma-Creme.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: brand/Logo-Ciao-Mamma-Pomodoro.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: site/assets/logo-pomodoro.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: site/assets/favicon.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "SVG nativo: site/assets/logo-creme.svg",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial preservada: BarlowCondensed-ExtraBoldItalic.ttf",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial preservada: BarlowCondensed-BoldItalic.ttf",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial preservada: BarlowCondensed-OFL.txt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial preservada: Manrope-Variable.ttf",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fonte oficial preservada: Manrope-OFL.txt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Seis fontes WOFF locais",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Manrope-Regular.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: BarlowCondensed-BoldItalic.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Manrope-SemiBold.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Manrope-Medium.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Manrope-Bold.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: BarlowCondensed-ExtraBoldItalic.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Licença OFL: BarlowCondensed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Licença OFL: Manrope",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Métrica de largura do título em 320",
+      "pass": true,
+      "detail": "estimativa 268.7px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 360",
+      "pass": true,
+      "detail": "estimativa 268.7px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 375",
+      "pass": true,
+      "detail": "estimativa 290.7px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 390",
+      "pass": true,
+      "detail": "estimativa 290.7px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 600",
+      "pass": true,
+      "detail": "estimativa 422.9px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 768",
+      "pass": true,
+      "detail": "estimativa 473.6px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 899",
+      "pass": true,
+      "detail": "estimativa 554.4px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 900",
+      "pass": true,
+      "detail": "estimativa 539.2px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 1024",
+      "pass": true,
+      "detail": "estimativa 613.5px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 1200",
+      "pass": true,
+      "detail": "estimativa 718.9px; não é renderização"
+    },
+    {
+      "name": "Métrica de largura do título em 1440",
+      "pass": true,
+      "detail": "estimativa 862.7px; não é renderização"
+    },
+    {
+      "name": "Roteiro 1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Roteiro 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Roteiro 3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Roteiro 4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Roteiro 5",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Roteiro 6",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "README completo",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Nenhum vídeo ou frame sequence no kit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Links do guia resolvem",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Hashes dos assets correspondem",
+      "pass": true,
+      "detail": "[]"
+    }
+  ]
+}

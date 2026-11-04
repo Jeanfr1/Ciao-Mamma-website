@@ -1,0 +1,64 @@
+{
+  "project": "Ciao Mamma! — Hamburg",
+  "date": "2026-11-04",
+  "model": 2,
+  "name": "Rosso in Movimento",
+  "hero_model": 2,
+  "body_model": 2,
+  "stage": "kit_complete",
+  "public_language": "de",
+  "video_created": false,
+  "deployment_requested": false,
+  "scene_order": [
+    {
+      "id": "amore",
+      "scene": "poster-rosso",
+      "background": "solid"
+    },
+    {
+      "id": "speisekarte",
+      "scene": "pizza-pasta-table",
+      "background": "campaign"
+    },
+    {
+      "id": "zutaten",
+      "scene": "ingredient-theatre",
+      "background": "campaign"
+    },
+    {
+      "id": "restaurant",
+      "scene": "real-venue-contact",
+      "background": "documentary"
+    }
+  ],
+  "business": {
+    "name": "Ciao Mamma!",
+    "address": "Am Sandtorkai 38–40, 20457 Hamburg",
+    "phone": "+494032513764",
+    "phone_display": "040 325 137 64",
+    "email": "info@ciaomamma.de",
+    "map": "https://www.google.com/maps/search/?api=1&query=Ciao+Mamma+Am+Sandtorkai+38-40+20457+Hamburg",
+    "sources": [
+      "https://www.hafencity.com/direkt-vor-ort-content/ciao-mamma",
+      "https://www.hamburg.de/branchenbuch/hamburg/eintrag/10247715/"
+    ],
+    "official_site": "https://www.ciaomamma.de/",
+    "official_site_status": "502 na pesquisa da proposta; nenhuma carta atual oficial obtida",
+    "menu_status": "Apresentação de categorias Pizza/Pasta; carta completa e preços precisam ser fornecidos/confirmados para integração.",
+    "booking": "Consulta por telefone; nenhuma reserva online ou pedido confirmado pelo site."
+  },
+  "reference": {
+    "choice": "Modelo 2 na conversa; sem imagem anexada adicional na escolha.",
+    "working_image": "references/Modelo-2-Referencia-de-Trabalho.png",
+    "working_image_origin": "Reprodução gerada para consulta local a partir da imagem de proposta 02 visível na conversa. Não é captura do site implementado nem cópia binária da imagem original da proposta.",
+    "notes": "Nenhuma parte do modelo 1 ou 3 foi escolhida."
+  },
+  "video_analysis": {
+    "source": "ANIMATIONIDEIA.mov",
+    "duration_seconds": 14,
+    "visual_review": "Concluída por amostragem de frames em 04/11/2026.",
+    "observed": "Gravação de tela de um exemplo de site de café em notebook: moedor central, grãos caem, componentes se separam, transição para filtro/café sendo servido, depois xícara e apresentação de produtos; tipografia grande e movimento de câmera ligam as cenas.",
+    "adaptation": "Pizza e ingredientes em planos móveis; transferência visual da pizza do Hero para a seção de menu no desktop; ingredientes se reorganizam e levam ao restaurante real.",
+    "not_included": "Arquivo MOV e frames da gravação não entram no kit; apenas análise/roteiro, sem dados da interface do navegador."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "selected_model": 2,
+  "hero_model": 2,
+  "body_model": 2,
+  "language": "de",
+  "main_scene_count": 4,
+  "solid_main_background_count": 1,
+  "scene_order": [
+    {
+      "id": "amore",
+      "scene": "poster-rosso",
+      "background": "solid"
+    },
+    {
+      "id": "speisekarte",
+      "scene": "pizza-pasta-table",
+      "background": "campaign"
+    },
+    {
+      "id": "zutaten",
+      "scene": "ingredient-theatre",
+      "background": "campaign"
+    },
+    {
+      "id": "restaurant",
+      "scene": "real-venue-contact",
+      "background": "documentary"
+    }
+  ],
+  "seams": [
+    "ascending",
+    "descending",
+    "ascending"
+  ],
+  "single_main_solid_scene": "amore",
+  "no_video": true,
+  "deployment": false,
+  "current_full_menu_provided": false,
+  "reference_image_is_browser_screenshot": false
+}

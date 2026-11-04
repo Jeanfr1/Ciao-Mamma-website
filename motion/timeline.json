@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "technique": "CSS transforms + Web Animations API + event-driven requestAnimationFrame; planar 2D assets",
+  "video": false,
+  "reduced_motion": "static, local pizzas visible; sticky runway removed",
+  "pause_storage_key": "ciao-mamma.motion.paused",
+  "mobile_shared_pizza": false,
+  "shared_pizza_min_width": 900,
+  "intro": {
+    "pizza": {
+      "duration_ms": 1500,
+      "translate_y_px": [
+        100,
+        0
+      ],
+      "rotate_deg": [
+        -8,
+        0
+      ],
+      "scale": [
+        0.86,
+        1
+      ],
+      "opacity": [
+        0.2,
+        1
+      ]
+    },
+    "slice": {
+      "duration_ms": 1650,
+      "delay_ms": 100,
+      "translate_px": [
+        [
+          40,
+          -70
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "rotate_deg": [
+        14,
+        0
+      ],
+      "scale": [
+        0.88,
+        1
+      ]
+    },
+    "basil": {
+      "duration_ms": 1000,
+      "delay_ms": 220,
+      "blur_px": [
+        3,
+        0
+      ]
+    },
+    "title": {
+      "duration_ms": 800,
+      "first_delay_ms": 100,
+      "stagger_ms": 100,
+      "translate_y_px": [
+        25,
+        0
+      ]
+    },
+    "cancel_on_early_scroll": true
+  },
+  "hero": {
+    "runway": "160svh, min-height 1380px desktop only while motion active",
+    "stage": "sticky top 0; 100svh, min-height 820px desktop",
+    "shared_transfer": "q=clamp((viewportHeight-menu.top)/viewportHeight); lerp between hero/menu pizza bounding rectangles",
+    "transfer_rotation": "sin(q*pi)*5deg",
+    "pointer_max_px": 4,
+    "mobile_effect_factor": 0.35
+  },
+  "ingredients": {
+    "progress": "clamp((viewportHeight-scene.top)/(viewportHeight+scene.height))",
+    "spread": "sin(progress*pi)",
+    "mobile_factor": 0.32,
+    "leaf_max_translate_px": [
+      -48,
+      -85
+    ],
+    "leaf_max_rotate_deg": -35,
+    "tomato_max_translate_px": [
+      25,
+      -70
+    ],
+    "tomato_max_rotate_deg": 28,
+    "cheese_max_translate_px": [
+      35,
+      -50
+    ],
+    "cheese_max_rotate_deg": -16,
+    "slice_half_range_px": [
+      17.5,
+      12.5
+    ],
+    "slice_half_range_deg": 4
+  },
+  "venue": {
+    "translate_half_range_px": {
+      "desktop": 9,
+      "mobile": 3
+    },
+    "scale": {
+      "desktop": 1.018,
+      "mobile": 1.006
+    }
+  },
+  "text_reveal": {
+    "duration_ms": 800,
+    "translate_y_px": [
+      18,
+      0
+    ],
+    "once": true,
+    "intersection_threshold": 0.12
+  },
+  "runtime": [
+    "native scroll",
+    "no endless animation loop",
+    "cancel on document hidden",
+    "saveData and prefers-reduced-motion override",
+    "images never capture pointer input"
+  ],
+  "reference_analysis": {
+    "source": "ANIMATIONIDEIA.mov",
+    "duration_seconds": 14,
+    "visual_review": "Concluída por amostragem de frames em 04/11/2026.",
+    "observed": "Gravação de tela de um exemplo de site de café em notebook: moedor central, grãos caem, componentes se separam, transição para filtro/café sendo servido, depois xícara e apresentação de produtos; tipografia grande e movimento de câmera ligam as cenas.",
+    "adaptation": "Pizza e ingredientes em planos móveis; transferência visual da pizza do Hero para a seção de menu no desktop; ingredientes se reorganizam e levam ao restaurante real.",
+    "not_included": "Arquivo MOV e frames da gravação não entram no kit; apenas análise/roteiro, sem dados da interface do navegador."
+  }
+}

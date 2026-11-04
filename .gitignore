@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+.vercel/
+
+# Third-party captures and visitor photos with the reviewer's UI: kept locally, never published (public repo)
+references/Concept-Pizza-Apresentada.png
+references/Concept-Poster-Rosso.png
+references/Referencia-Ingredientes.png
+references/Referencia-Pizza-Camadas.png
+images/originals/Restaurante-Original.png
+images/originals/Mesa-Pizza-Pasta-Original.png
+
+# Rebuilt by scripts/prepare-images.py
+images/upscaled/
+# QA captures
+studio/captures/

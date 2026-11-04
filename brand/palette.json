@@ -1,0 +1,31 @@
+{
+  "model": 2,
+  "name": "Rosso in Movimento",
+  "colors": [
+    {
+      "name": "Pomodoro",
+      "hex": "#AC2E27",
+      "role": "único fundo principal liso: hero; marca e ações em base creme"
+    },
+    {
+      "name": "Creme",
+      "hex": "#F3EAD6",
+      "role": "lettering e texto sobre vermelho/fotografia escura"
+    },
+    {
+      "name": "Basilico",
+      "hex": "#2F4A34",
+      "role": "folha da marca e detalhe de identidade"
+    },
+    {
+      "name": "Carbone",
+      "hex": "#181613",
+      "role": "interfaces escuras e camadas de contraste"
+    }
+  ],
+  "fonts": {
+    "display": "Barlow Condensed Bold Italic 700 / ExtraBold Italic 800",
+    "body": "Manrope 400 / 500 / 600 / 700",
+    "logo": "lettering próprio vetorizado; não é um alfabeto completo"
+  }
+}
