@@ -3,23 +3,29 @@
   const root=document.documentElement,hero=document.getElementById('amore'),stage=hero.querySelector('.hero-stage'),menu=document.getElementById('speisekarte'),taste=document.getElementById('zutaten'),venue=document.getElementById('restaurant');
   const heroPizza=hero.querySelector('.hero-main-pizza'),menuPizza=menu.querySelector('.menu-pizza'),mainImage=document.getElementById('hero-main-image'),traveller=document.getElementById('travelling-pizza'),travellerImage=document.getElementById('travelling-image');
   const toggle=document.getElementById('motion-toggle'),storageKey='ciao-mamma.motion.paused',reduced=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(pointer:fine)'),connection=navigator.connection;
+  const skipIntro=new URLSearchParams(location.search).has('nointro');
   let manual=false;try{manual=localStorage.getItem(storageKey)==='1';}catch{}
   let enabled=false,frame=0,intro=[],observer=null,opened=false,pointerX=0,pointerY=0,shared=false;
-  const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n)),lerp=(a,b,p)=>a+(b-a)*p;
+  const clamp=(n,a=0,b=1)=>Math.max(a,Math.min(b,n)),lerp=(a,b,p)=>a+(b-a)*p,smooth=t=>t*t*(3-2*t);
   const progress=rect=>clamp((innerHeight-rect.top)/(innerHeight+rect.height));
   const heroVars=['--secondary-x','--secondary-y','--secondary-r','--slice-x','--slice-y','--slice-r','--leaf-x','--leaf-y','--leaf-r','--crumb-y'];
-  const tasteVars=['--taste-slice-x','--taste-slice-y','--taste-slice-r','--taste-leaf-x','--taste-leaf-y','--taste-leaf-r','--taste-tomato-x','--taste-tomato-y','--taste-tomato-r','--taste-cheese-x','--taste-cheese-y','--taste-cheese-r','--taste-small-y'];
+  const tasteVars=['--e','--f'];
+  const venueVars=['--venue-reveal','--venue-scale'];
   function cancelIntro(){intro.forEach(a=>a.cancel());intro=[];}
   function setShared(on){shared=on;root.classList.toggle('shared-pizza-active',on);}
-  function clear(){cancelAnimationFrame(frame);frame=0;cancelIntro();setShared(false);heroVars.forEach(v=>hero.style.removeProperty(v));tasteVars.forEach(v=>taste.style.removeProperty(v));['--venue-y','--venue-scale'].forEach(v=>venue.style.removeProperty(v));traveller.style.removeProperty('transform');traveller.style.removeProperty('width');}
+  function clear(){cancelAnimationFrame(frame);frame=0;cancelIntro();setShared(false);heroVars.forEach(v=>hero.style.removeProperty(v));tasteVars.forEach(v=>taste.style.removeProperty(v));venueVars.forEach(v=>venue.style.removeProperty(v));menu.style.removeProperty('--menu-bg-y');traveller.style.removeProperty('transform');traveller.style.removeProperty('width');}
   function update(){
     frame=0;if(!enabled||document.hidden)return;
     const h=innerHeight,w=innerWidth,hr=hero.getBoundingClientRect(),sr=stage.getBoundingClientRect(),mr=menu.getBoundingClientRect(),tr=taste.getBoundingClientRect(),vr=venue.getBoundingClientRect();
     const desktop=w>=900,ready=mainImage.complete&&mainImage.naturalWidth>0;
+
+    // Scene 1 -> 2: one pizza leaves the poster and lands on the table (desktop only)
     const showShared=desktop&&ready&&hr.top<h&&(hr.bottom>0||mr.bottom>0);
     let from=null,to=null;if(showShared){from=heroPizza.getBoundingClientRect();to=menuPizza.getBoundingClientRect();}
     setShared(showShared);
     if(showShared){const q=clamp((h-mr.top)/h),x=lerp(from.left,to.left,q),y=lerp(from.top,to.top,q),scale=lerp(1,to.width/from.width,q),rotation=Math.sin(q*Math.PI)*5;traveller.style.width=from.width+'px';traveller.style.transform=`translate3d(${x}px,${y}px,0) rotate(${rotation}deg) scale(${scale})`;}
+
+    // Scene 1: depth planes drift at different speeds while the poster is pinned
     if(hr.bottom>0&&hr.top<h){
       const p=clamp(-hr.top/Math.max(1,hr.height-sr.height));
       const mobileFactor=desktop?1:.35;
@@ -28,14 +34,23 @@
       hero.style.setProperty('--leaf-x',(p*30*mobileFactor-pointerX*.8)+'px');hero.style.setProperty('--leaf-y',(-p*65*mobileFactor-pointerY*.8)+'px');hero.style.setProperty('--leaf-r',(-p*40*mobileFactor)+'deg');hero.style.setProperty('--crumb-y',(p*35*mobileFactor)+'px');
       if((p>.04||sr.top<-30)&&intro.length)cancelIntro();
     }
+
+    // Scene 2: the stone table slides slower than the page
+    if(mr.bottom>0&&mr.top<h){const p=progress(mr);menu.style.setProperty('--menu-bg-y',((p-.5)*(desktop?-40:-14)).toFixed(1)+'px');}
+
+    // Scene 3: the ingredients leave the slice and settle around it, then float
     if(tr.bottom>0&&tr.top<h){
-      const p=progress(tr),spread=Math.sin(p*Math.PI),k=desktop?1:.32;
-      taste.style.setProperty('--taste-slice-x',((p-.5)*35*k)+'px');taste.style.setProperty('--taste-slice-y',((p-.5)*25*k)+'px');taste.style.setProperty('--taste-slice-r',((p-.5)*8*k)+'deg');
-      taste.style.setProperty('--taste-leaf-x',(-spread*48*k)+'px');taste.style.setProperty('--taste-leaf-y',(-spread*85*k)+'px');taste.style.setProperty('--taste-leaf-r',(-spread*35*k)+'deg');
-      taste.style.setProperty('--taste-tomato-x',(spread*25*k)+'px');taste.style.setProperty('--taste-tomato-y',(-spread*70*k)+'px');taste.style.setProperty('--taste-tomato-r',(spread*28*k)+'deg');
-      taste.style.setProperty('--taste-cheese-x',(spread*35*k)+'px');taste.style.setProperty('--taste-cheese-y',(-spread*50*k)+'px');taste.style.setProperty('--taste-cheese-r',(-spread*16*k)+'deg');taste.style.setProperty('--taste-small-y',(spread*25*k)+'px');
+      const p=progress(tr),k=desktop?1:.32;
+      taste.style.setProperty('--e',smooth(clamp((p-.06)/.36)).toFixed(3));
+      taste.style.setProperty('--f',(Math.sin(p*Math.PI)*k).toFixed(3));
     }
-    if(vr.bottom>0&&vr.top<h){const p=progress(vr);venue.style.setProperty('--venue-y',((p-.5)*(desktop?18:6))+'px');venue.style.setProperty('--venue-scale',desktop?'1.018':'1.006');}
+
+    // Scene 4: the real room is uncovered from the right, settling from 1.02 to 1
+    if(vr.bottom>0&&vr.top<h){
+      const p=progress(vr),r=smooth(clamp((p-.04)/.3));
+      venue.style.setProperty('--venue-reveal',desktop?r.toFixed(3):'1');
+      venue.style.setProperty('--venue-scale',(desktop?1.02-.02*r:1.006).toFixed(4));
+    }
   }
   function request(){if(enabled&&!frame&&!document.hidden)frame=requestAnimationFrame(update);}
   function reveal(){
@@ -45,14 +60,16 @@
     document.querySelectorAll('[data-reveal]').forEach(e=>observer.observe(e));
   }
   async function opening(){
-    if(opened||!enabled||scrollY>25)return;opened=true;
+    if(opened||!enabled||scrollY>25||skipIntro)return;opened=true;
     await Promise.allSettled([document.fonts?.ready??Promise.resolve(),mainImage.decode?.()??Promise.resolve()]);
     if(!enabled||scrollY>25||!mainImage.animate)return;update();
+    const ease='cubic-bezier(.16,.75,.2,1)';
     const pizza=shared?travellerImage:mainImage;
-    intro.push(pizza.animate([{transform:'translateY(100px) rotate(-8deg) scale(.86)',opacity:.2},{transform:'translateY(0) rotate(0) scale(1)',opacity:1}],{duration:1500,easing:'cubic-bezier(.16,.75,.2,1)'}));
-    const slice=hero.querySelector('.hero-slice img');intro.push(slice.animate([{transform:'translate(40px,-70px) rotate(14deg) scale(.88)',opacity:.2},{transform:'translate(0,0) rotate(0) scale(1)',opacity:1}],{duration:1650,delay:100,easing:'cubic-bezier(.16,.75,.2,1)'}));
+    intro.push(pizza.animate([{transform:'translateY(100px) rotate(-8deg) scale(.86)',opacity:.2},{transform:'translateY(0) rotate(0) scale(1)',opacity:1}],{duration:1500,easing:ease}));
+    const slice=hero.querySelector('.hero-slice img');intro.push(slice.animate([{transform:'translate(40px,-70px) rotate(14deg) scale(.88)',opacity:.2},{transform:'translate(0,0) rotate(0) scale(1)',opacity:1}],{duration:1650,delay:100,easing:ease}));
+    const second=hero.querySelector('.hero-secondary img');intro.push(second.animate([{transform:'translateX(60px) rotate(10deg)',opacity:0},{transform:'none',opacity:1}],{duration:1400,delay:160,easing:ease}));
     const leaf=hero.querySelector('.hero-basil');intro.push(leaf.animate([{opacity:0,filter:'blur(3px)'},{opacity:1,filter:'blur(0)'}],{duration:1000,delay:220,easing:'ease-out'}));
-    hero.querySelectorAll('.poster-title span').forEach((line,i)=>intro.push(line.animate([{transform:'translateY(25px)',opacity:.5},{transform:'translateY(0)',opacity:1}],{duration:800,delay:100+i*100,easing:'ease-out'})));
+    hero.querySelectorAll('.poster-title .line>span').forEach((line,i)=>intro.push(line.animate([{transform:'translateY(25px)',opacity:0},{transform:'translateY(0)',opacity:1}],{duration:800,delay:100+i*100,easing:'ease-out',fill:'backwards'})));
     Promise.allSettled(intro.map(a=>a.finished)).then(()=>{intro=[];});
   }
   function setMotion(preserve=false){
@@ -68,6 +85,7 @@
   toggle.addEventListener('click',()=>{manual=enabled;try{localStorage.setItem(storageKey,manual?'1':'0');}catch{}setMotion(true);});
   reduced.addEventListener?.('change',()=>setMotion(true));connection?.addEventListener?.('change',()=>setMotion(true));
   addEventListener('scroll',request,{passive:true});addEventListener('resize',request,{passive:true});
+  addEventListener('load',request);
   stage.addEventListener('pointermove',e=>{if(!enabled||!fine.matches||innerWidth<900)return;const r=stage.getBoundingClientRect();pointerX=((e.clientX-r.left)/r.width-.5)*8;pointerY=((e.clientY-r.top)/r.height-.5)*8;request();},{passive:true});
   stage.addEventListener('pointerleave',()=>{pointerX=0;pointerY=0;request();},{passive:true});
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;cancelIntro();}else request();});

@@ -1,0 +1,14 @@
+{
+  "name": "ciao-mamma-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs 4431",
+    "qa": "node scripts/qa.mjs",
+    "measure": "node scripts/measure.mjs",
+    "kit": "python3 tools/verificar-kit.py"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.56.1"
+  }
+}

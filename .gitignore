@@ -12,5 +12,5 @@ images/originals/Mesa-Pizza-Pasta-Original.png
 
 # Rebuilt by scripts/prepare-images.py
 images/upscaled/
-# QA captures
-studio/captures/
+# QA captures, README raw frames
+studio/

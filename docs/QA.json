@@ -1,13 +1,12 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "scope": "static checks only",
   "status": "PASS",
   "checks": 105,
   "passed": 105,
   "failed": 0,
-  "browser_qa": "UNVERIFIED",
-  "browser_reason": "Managed preview daemon unavailable: /tmp/sites-previewd/requests does not exist. No browser rendering or interaction test completed.",
-  "publication": "not requested; not performed",
+  "browser_qa": "separate: npm run qa (scripts/qa.mjs, Playwright)",
+  "publication": "Vercel preview, noindex, after the owner authorises it",
   "current_menu": "category overview only; current full menu and prices require restaurant confirmation",
   "results": [
     {
@@ -176,32 +175,17 @@
       "detail": ""
     },
     {
-      "name": "Mestre válido: menu-stage.png",
+      "name": "Mestre válido: mozzarella.png",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Fundo previsto: menu-stage.png",
+      "name": "Fundo previsto: mozzarella.png",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "WebP válido: menu-stage",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "Mestre válido: pizza-main.png",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "Fundo previsto: pizza-main.png",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "WebP válido: pizza-main",
+      "name": "WebP válido: mozzarella",
       "pass": true,
       "detail": ""
     },
@@ -251,32 +235,17 @@
       "detail": ""
     },
     {
-      "name": "Mestre válido: taste-stage.png",
+      "name": "Mestre válido: pizza-main.png",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Fundo previsto: taste-stage.png",
+      "name": "Fundo previsto: pizza-main.png",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "WebP válido: taste-stage",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "Mestre válido: mozzarella.png",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "Fundo previsto: mozzarella.png",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "WebP válido: mozzarella",
+      "name": "WebP válido: pizza-main",
       "pass": true,
       "detail": ""
     },
@@ -296,6 +265,36 @@
       "detail": ""
     },
     {
+      "name": "Mestre válido: taste-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: taste-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: taste-stage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mestre válido: menu-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Fundo previsto: menu-stage.png",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebP válido: menu-stage",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Foto real preservada: Restaurante-Original.png",
       "pass": true,
       "detail": ""
@@ -311,7 +310,7 @@
       "detail": ""
     },
     {
-      "name": "Recortes documentais nativos",
+      "name": "Recortes documentais sem a barra do visualizador",
       "pass": true,
       "detail": ""
     },
@@ -326,12 +325,12 @@
       "detail": ""
     },
     {
-      "name": "SVG nativo: brand/Avatar-Ciao-Mamma.svg",
+      "name": "SVG nativo: brand/Sinal-Folha.svg",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "SVG nativo: brand/Sinal-Folha.svg",
+      "name": "SVG nativo: brand/Avatar-Ciao-Mamma.svg",
       "pass": true,
       "detail": ""
     },
@@ -346,7 +345,7 @@
       "detail": ""
     },
     {
-      "name": "SVG nativo: site/assets/logo-pomodoro.svg",
+      "name": "SVG nativo: site/assets/logo-creme.svg",
       "pass": true,
       "detail": ""
     },
@@ -356,7 +355,7 @@
       "detail": ""
     },
     {
-      "name": "SVG nativo: site/assets/logo-creme.svg",
+      "name": "SVG nativo: site/assets/logo-pomodoro.svg",
       "pass": true,
       "detail": ""
     },
@@ -391,12 +390,7 @@
       "detail": ""
     },
     {
-      "name": "Glifos alemães: Manrope-Regular.woff",
-      "pass": true,
-      "detail": ""
-    },
-    {
-      "name": "Glifos alemães: BarlowCondensed-BoldItalic.woff",
+      "name": "Glifos alemães: Manrope-Medium.woff",
       "pass": true,
       "detail": ""
     },
@@ -406,7 +400,7 @@
       "detail": ""
     },
     {
-      "name": "Glifos alemães: Manrope-Medium.woff",
+      "name": "Glifos alemães: BarlowCondensed-ExtraBoldItalic.woff",
       "pass": true,
       "detail": ""
     },
@@ -416,7 +410,12 @@
       "detail": ""
     },
     {
-      "name": "Glifos alemães: BarlowCondensed-ExtraBoldItalic.woff",
+      "name": "Glifos alemães: BarlowCondensed-BoldItalic.woff",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Glifos alemães: Manrope-Regular.woff",
       "pass": true,
       "detail": ""
     },
@@ -516,7 +515,7 @@
       "detail": ""
     },
     {
-      "name": "README completo",
+      "name": "LEIA-ME do kit completo",
       "pass": true,
       "detail": ""
     },

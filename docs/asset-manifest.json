@@ -176,134 +176,6 @@
     "sha256": "644066b054a82b105c45258cefca88c3b3da595bce772088e2d00f9d8fe9f6ac"
   },
   {
-    "path": "site/assets/basil.webp",
-    "classification": "production_export",
-    "bytes": 241136,
-    "sha256": "675a1a6ca4db2c8f032cac9d966087137c426bd586e2c10cd68e7baa5af7b21f",
-    "width": 1254,
-    "height": 1254,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
-    "path": "site/assets/facade-original.webp",
-    "classification": "production_export",
-    "bytes": 117384,
-    "sha256": "bb1500293b142d567de875a858206634fafe14e17efeb93af168c979939c3d1d",
-    "width": 1820,
-    "height": 642,
-    "mode": "RGB",
-    "alpha": false
-  },
-  {
-    "path": "site/assets/favicon.svg",
-    "classification": "production_export",
-    "bytes": 15315,
-    "sha256": "2886df5a79863bcd588f657d7c1fe6ef9bce394a9b54d19f66c0f8b04424d2cb"
-  },
-  {
-    "path": "site/assets/logo-creme.svg",
-    "classification": "production_export",
-    "bytes": 236985,
-    "sha256": "66a913f6b7b7db8c2a9f248173b5533fc80f6dc401f07418191bece6fd9eabf2"
-  },
-  {
-    "path": "site/assets/logo-pomodoro.svg",
-    "classification": "production_export",
-    "bytes": 236985,
-    "sha256": "8171a88d6ededd1661c080c94d9334179b27ba6cdd25f4f8563cfc8696127f33"
-  },
-  {
-    "path": "site/assets/menu-stage.webp",
-    "classification": "production_export",
-    "bytes": 414490,
-    "sha256": "967f39a1f4a774421fd45204d5a9d58e9b0985677ecdd3812ff1f12176fa210a",
-    "width": 1599,
-    "height": 984,
-    "mode": "RGB",
-    "alpha": false
-  },
-  {
-    "path": "site/assets/mozzarella.webp",
-    "classification": "production_export",
-    "bytes": 99958,
-    "sha256": "45171df29bde0b4246004cbfc2de52c222eb3e04e1e94d6908489dfe259f58bd",
-    "width": 1254,
-    "height": 1254,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
-    "path": "site/assets/pizza-main.webp",
-    "classification": "production_export",
-    "bytes": 653008,
-    "sha256": "47d06f7f677f651cea9319b18866c1da36e6ee93a71394ccbc4e7cbe8da629b9",
-    "width": 1466,
-    "height": 1073,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
-    "path": "site/assets/pizza-secondary.webp",
-    "classification": "production_export",
-    "bytes": 747476,
-    "sha256": "669d32f9e035e75d2b19b88b806e0cf965d43cb489046e420e7fcb8a26ce3ae3",
-    "width": 1466,
-    "height": 1073,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
-    "path": "site/assets/pizza-slice.webp",
-    "classification": "production_export",
-    "bytes": 376296,
-    "sha256": "510af41bf18c44d4a41e4c92361ad586353059f04cf1feea97761e3c47dbcac3",
-    "width": 1484,
-    "height": 1060,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
-    "path": "site/assets/restaurant.webp",
-    "classification": "production_export",
-    "bytes": 222400,
-    "sha256": "7f1830d5c4da8f2bc403f29c236be9364652b5d94ef89422317b9b72602cfe40",
-    "width": 756,
-    "height": 1004,
-    "mode": "RGB",
-    "alpha": false
-  },
-  {
-    "path": "site/assets/table-original.webp",
-    "classification": "production_export",
-    "bytes": 285724,
-    "sha256": "52efca8940b0bd506784c3a06abeb3c52219a5a88300ae01213b4f8c2bd3efc3",
-    "width": 678,
-    "height": 1014,
-    "mode": "RGB",
-    "alpha": false
-  },
-  {
-    "path": "site/assets/taste-stage.webp",
-    "classification": "production_export",
-    "bytes": 316522,
-    "sha256": "14c66c3834d90223714c01eb91766ba181b711d37d933e18287e5d69b84de398",
-    "width": 1551,
-    "height": 1014,
-    "mode": "RGB",
-    "alpha": false
-  },
-  {
-    "path": "site/assets/tomato.webp",
-    "classification": "production_export",
-    "bytes": 332426,
-    "sha256": "de0d5f9c8239c721df0ab50ffa5556e3481cf6732c3542ddaf2467a3cfab3a6b",
-    "width": 1254,
-    "height": 1254,
-    "mode": "RGBA",
-    "alpha": true
-  },
-  {
     "path": "references/Concept-Pizza-Apresentada.png",
     "classification": "reference_only",
     "bytes": 2691614,
@@ -352,5 +224,203 @@
     "height": 1548,
     "mode": "RGBA",
     "alpha": true
+  },
+  {
+    "path": "site/assets/basil-640.webp",
+    "classification": "production_export",
+    "bytes": 47056,
+    "sha256": "3273bdc7ba7cb303ab5be47e6ea470fa7cf0e68276d38eb686ec99071b83e7fc",
+    "width": 640,
+    "height": 640,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/basil.webp",
+    "classification": "production_export",
+    "bytes": 157142,
+    "sha256": "136567c3a0ddfe8d613aff410c09dd1bd9341fc4c37e7c32eb00d3ad0885f303",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/facade-original.webp",
+    "classification": "production_export",
+    "bytes": 117384,
+    "sha256": "bb1500293b142d567de875a858206634fafe14e17efeb93af168c979939c3d1d",
+    "width": 1820,
+    "height": 642,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/favicon.svg",
+    "classification": "production_export",
+    "bytes": 15315,
+    "sha256": "2886df5a79863bcd588f657d7c1fe6ef9bce394a9b54d19f66c0f8b04424d2cb"
+  },
+  {
+    "path": "site/assets/logo-creme.svg",
+    "classification": "production_export",
+    "bytes": 236985,
+    "sha256": "66a913f6b7b7db8c2a9f248173b5533fc80f6dc401f07418191bece6fd9eabf2"
+  },
+  {
+    "path": "site/assets/logo-pomodoro.svg",
+    "classification": "production_export",
+    "bytes": 236985,
+    "sha256": "8171a88d6ededd1661c080c94d9334179b27ba6cdd25f4f8563cfc8696127f33"
+  },
+  {
+    "path": "site/assets/menu-stage-2560.webp",
+    "classification": "production_export",
+    "bytes": 330236,
+    "sha256": "b29bb74e913ae9f8df15b6acf722c772eb9c71020eee0a656a28b0020abba121",
+    "width": 2560,
+    "height": 1575,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/menu-stage.webp",
+    "classification": "production_export",
+    "bytes": 414490,
+    "sha256": "967f39a1f4a774421fd45204d5a9d58e9b0985677ecdd3812ff1f12176fa210a",
+    "width": 1599,
+    "height": 984,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/mozzarella-640.webp",
+    "classification": "production_export",
+    "bytes": 23694,
+    "sha256": "ca9374cf4928a5a98291fc514c1a940e02f59cab85a7eaa214dca138820be19b",
+    "width": 640,
+    "height": 640,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/mozzarella.webp",
+    "classification": "production_export",
+    "bytes": 72446,
+    "sha256": "bc8b73ced73b598ea853d36079843f39f0236e728476cfa0a94b32c980877974",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-main.webp",
+    "classification": "production_export",
+    "bytes": 476902,
+    "sha256": "dd17358878db1565818708b720cc494450f763105dd894ce5db6e703216b5d8a",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-secondary.webp",
+    "classification": "production_export",
+    "bytes": 558682,
+    "sha256": "bbb402c35db721a12a42885ad7b186cc011895b2bfc7b3f55484412da34906ae",
+    "width": 1466,
+    "height": 1073,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/pizza-slice.webp",
+    "classification": "production_export",
+    "bytes": 277888,
+    "sha256": "9f79c67499eba0ce594d4bc62df1900b84e05d37f4d075ee20da8b904f19882a",
+    "width": 1484,
+    "height": 1060,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/table-real.webp",
+    "classification": "documentary_user_original_cropped",
+    "bytes": 224418,
+    "sha256": "dbbfebd6a5e6b31a11d2771c5fd0ad001598c4ab7c831fbc8abbdc9956971a6c",
+    "width": 1100,
+    "height": 1518,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/taste-stage-2560.webp",
+    "classification": "production_export",
+    "bytes": 173356,
+    "sha256": "522fb477588e8795f5231428e851d6e83f58f77ac478079ed6b214dbde301bb2",
+    "width": 2560,
+    "height": 1674,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/taste-stage.webp",
+    "classification": "production_export",
+    "bytes": 316522,
+    "sha256": "14c66c3834d90223714c01eb91766ba181b711d37d933e18287e5d69b84de398",
+    "width": 1551,
+    "height": 1014,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/tomato-640.webp",
+    "classification": "production_export",
+    "bytes": 82002,
+    "sha256": "18fff45455c54198f849f4f05f5b61bea217da7bc5e646c84176d56dcead18db",
+    "width": 640,
+    "height": 640,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/tomato.webp",
+    "classification": "production_export",
+    "bytes": 250392,
+    "sha256": "1171f35715141812b8b1ca4d0a05a5be0115af8df757e7956b3c8132ec0b90e1",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha": true
+  },
+  {
+    "path": "site/assets/venue-ambient.webp",
+    "classification": "production_export",
+    "bytes": 1440,
+    "sha256": "c47e32526dd0edd57f183d9d5a5d54b3cea261f35b22e670ab8bf8d7f6c25acc",
+    "width": 480,
+    "height": 228,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/venue-interior-900.webp",
+    "classification": "documentary_user_original_cropped",
+    "bytes": 117130,
+    "sha256": "aef329f61880ea67e9a1877464765caeddadac8266c9355247b962d8ad680f7e",
+    "width": 900,
+    "height": 1094,
+    "mode": "RGB",
+    "alpha": false
+  },
+  {
+    "path": "site/assets/venue-interior.webp",
+    "classification": "documentary_user_original_cropped",
+    "bytes": 216974,
+    "sha256": "c46b3193332531b1a1bf84a83b2fcce4765889390e9f5771bf2507703a1fdb06",
+    "width": 1512,
+    "height": 1838,
+    "mode": "RGB",
+    "alpha": false
   }
 ]

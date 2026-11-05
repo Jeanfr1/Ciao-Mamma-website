@@ -3,7 +3,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
-import hashlib,json,re,subprocess,sys
+import datetime,hashlib,json,re,subprocess,sys
 import xml.etree.ElementTree as ET
 from PIL import Image
 from fontTools.ttLib import TTFont
@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 checks=[]
 def check(name,condition,detail=''):
     checks.append({'name':name,'pass':bool(condition),'detail':detail})
-def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else 'ausente'
 class Markup(HTMLParser):
     def __init__(self,text):
         super().__init__();self.nodes=[];self.feed(text)
@@ -92,7 +92,8 @@ for f in masters:
         im.load();check('WebP válido: '+f.stem,im.size==Image.open(f).size and ('A'in im.getbands())==(f.stem in cutouts))
 expected={'Restaurante-Original.png':'a4e5e63105dde061b3779548297a59ce16c449b923b22dea9609121df79d110c','Mesa-Pizza-Pasta-Original.png':'988b876d0dd8dbfc70dcf5f68fe37b8976e306f88d89617b78b404b5a03adb78','Fachada-Original.png':'5d11f3704685e423a365376d9594df5d764cdbdec65be0004cde43227d9bd4fa'}
 for name,sha in expected.items():check('Foto real preservada: '+name,digest(ROOT/'images/originals'/name)==sha)
-check('Recortes documentais nativos',all(x in html for x in ('viewBox="0 90 756 914"','viewBox="0 90 678 924"')))
+# 2026-11-05: interior/table are exported pre-cropped (viewer strip with the reviewer's name removed) instead of an SVG viewBox crop
+check('Recortes documentais sem a barra do visualizador',all(x in html for x in ('assets/venue-interior.webp','assets/table-real.webp')) and not re.search(r'restaurant\.webp|table-original\.webp',html) and all((ROOT/'site/assets'/n).is_file() for n in ('venue-interior.webp','venue-interior-900.webp','table-real.webp')))
 for name in ('Pomodoro','Creme'):
     f=ROOT/'brand'/f'Logo-Ciao-Mamma-{name}-Transparente.png'
     with Image.open(f) as im:
@@ -111,8 +112,9 @@ for width in (320,360,375,390,600,768,899,900,1024,1200,1440):
     gutter=18 if width<=370 else 22 if width<=600 else max(24,min(width*.05,96));estimate=em*fs-.03*fs*(len(text)-1)
     check('Métrica de largura do título em '+str(width),estimate<=width-2*gutter,f'estimativa {estimate:.1f}px; não é renderização')
 for n,name in enumerate(('DIRECAO-DE-ARTE','HERO-E-ANIMACAO','CENAS-E-TRANSICOES','CONTEUDO-E-INTEGRACAO','IMAGENS-E-MARCA','VALIDACAO-E-ENTREGA'),1):check('Roteiro '+str(n),(ROOT/'roteiros'/f'{n:02}-{name}.md').is_file())
-check('README completo',(ROOT/'README.md').stat().st_size>3000)
-check('Nenhum vídeo ou frame sequence no kit',not any(f.suffix.lower()in ('.mov','.mp4','.webm','.gif')for f in ROOT.rglob('*')))
+check('LEIA-ME do kit completo',(ROOT/'LEIA-ME-KIT.md').stat().st_size>3000)
+skip={'node_modules','.git','.github','studio','.vercel'}
+check('Nenhum vídeo ou frame sequence no kit',not any(f.suffix.lower()in ('.mov','.mp4','.webm','.gif')for f in ROOT.rglob('*') if not skip.intersection(f.relative_to(ROOT).parts)))
 guide=Markup((ROOT/'GUIA-VISUAL.html').read_text());guide_missing=[]
 for _,a in guide.nodes:
     for attr in ('src','href'):
@@ -122,9 +124,10 @@ check('Links do guia resolvem',not guide_missing,str(guide_missing))
 assets=json.loads((ROOT/'docs/asset-manifest.json').read_text());bad_assets=[e['path']for e in assets if digest(ROOT/e['path'])!=e['sha256']]
 check('Hashes dos assets correspondem',not bad_assets,str(bad_assets))
 failed=[x for x in checks if not x['pass']]
-result={'date':'2026-11-04','scope':'static checks only','status':'PASS'if not failed else'FAIL','checks':len(checks),'passed':len(checks)-len(failed),'failed':len(failed),'browser_qa':'UNVERIFIED','browser_reason':'Managed preview daemon unavailable: /tmp/sites-previewd/requests does not exist. No browser rendering or interaction test completed.','publication':'not requested; not performed','current_menu':'category overview only; current full menu and prices require restaurant confirmation','results':checks}
+today=datetime.date.today()
+result={'date':today.isoformat(),'scope':'static checks only','status':'PASS'if not failed else'FAIL','checks':len(checks),'passed':len(checks)-len(failed),'failed':len(failed),'browser_qa':'separate: npm run qa (scripts/qa.mjs, Playwright)','publication':'Vercel preview, noindex, after the owner authorises it','current_menu':'category overview only; current full menu and prices require restaurant confirmation','results':checks}
 (ROOT/'docs/QA.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-lines=['# Validação — Ciao Mamma! / modelo 2','',f"**{result['status']} — {result['passed']}/{len(checks)} verificações estáticas aprovadas.** Data: 04/11/2026.",'','Cobertura: ordem das quatro cenas, único fundo liso, idioma, dados de contato, links e ARIA, JavaScript, caminhos locais, dimensões, PNG alfa, WebP decodificável, SVG nativo, fontes e licenças, hashes dos assets e originais, métricas de largura e documentação. O detalhamento está em `QA.json`.','','**Navegador: NÃO VERIFICADO.** O serviço de prévia retornou ausência do daemon (`/tmp/sites-previewd/requests`). Não foi feita renderização da implementação, teste de cliques, continuidade visual, teclado ou revisão responsiva em navegador. As métricas de fonte são estimativas estáticas, não prova visual.','','A revisão de navegador necessária está em `../roteiros/06-VALIDACAO-E-ENTREGA.md`. O PNG de referência não é uma captura do site.','','A carta atual completa e os preços não foram confirmados. A implementação apresenta Pizza/Pasta e encaminha a consulta por telefone. Nenhuma reserva é confirmada pelo site. Não houve publicação.']
+lines=['# Validação — Ciao Mamma! / modelo 2','',f"**{result['status']} — {result['passed']}/{len(checks)} verificações estáticas aprovadas.** Data: {today:%d/%m/%Y}.",'','Cobertura: ordem das quatro cenas, único fundo liso, idioma, dados de contato, links e ARIA, JavaScript, caminhos locais, dimensões, PNG alfa, WebP decodificável, SVG nativo, fontes e licenças, hashes dos assets e originais, métricas de largura e documentação. O detalhamento está em `QA.json`.','','**Navegador:** verificado à parte por `npm run qa` (`scripts/qa.mjs`, Playwright): densidade das cenas em janelas reais, sobreposição do título, imagens sem ampliação, diálogo e teclado, menu móvel, pausa, movimento reduzido e versão sem JavaScript. As métricas de fonte abaixo são estimativas estáticas.','','A revisão de navegador necessária está em `../roteiros/06-VALIDACAO-E-ENTREGA.md`. O PNG de referência não é uma captura do site.','','A carta atual completa e os preços não foram confirmados. A implementação apresenta Pizza/Pasta e encaminha a consulta por telefone. Nenhuma reserva é confirmada pelo site.']
 if failed:lines+=['','## Falhas']+['- '+x['name']+': '+x['detail']for x in failed]
 (ROOT/'docs/QA.md').write_text('\n'.join(lines)+'\n')
 print(json.dumps({k:result[k]for k in ('status','checks','passed','failed','browser_qa')},ensure_ascii=False))

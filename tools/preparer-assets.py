@@ -62,8 +62,9 @@ def webp_atomic(source,destination,quality):
         buffer=BytesIO();im.save(buffer,format='WEBP',quality=quality,method=6)
     temporary=destination.with_suffix('.webp.tmp');temporary.write_bytes(buffer.getvalue());temporary.replace(destination)
 for path in (ROOT/'images/master').glob('*.png'):
-    webp_atomic(path,ROOT/'site/assets'/(path.stem+'.webp'),94)
-for path,name in [(ROOT/'images/originals/Restaurante-Original.png','restaurant.webp'),(ROOT/'images/originals/Mesa-Pizza-Pasta-Original.png','table-original.webp'),(ROOT/'images/originals/Fachada-Original.png','facade-original.webp')]:
+    webp_atomic(path,ROOT/'site/assets'/(path.stem+'.webp'),86)
+# Interior and table photos: exported cropped (no viewer strip) by scripts/prepare-images.py
+for path,name in [(ROOT/'images/originals/Fachada-Original.png','facade-original.webp')]:
     webp_atomic(path,ROOT/'site/assets'/name,95)
 report={'source_logo_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'native_svg':True,'red_contours':red_count,'leaf_contours':green_count,'icon_contours':icon_count,'header_viewbox':crop,'png_size':[1774,887],'webp_quality':94,'documentary_webp_quality':95,'documentary_crop':'SVG viewBox 0 90 756 914 for interior; 0 90 678 924 for table; originals untouched.'}
 (ROOT/'docs/asset-exports.json').write_text(json.dumps(report,indent=2));print(json.dumps(report))
