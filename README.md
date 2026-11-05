@@ -5,7 +5,7 @@
 <h3>A one-page website for an Italian restaurant in Hamburg's HafenCity, where one pizza leaves a red poster and lands on the table.</h3>
 
 <p>
-  <a href="#deployment"><strong>🌐 Live site (preview soon)</strong></a>
+  <a href="https://ciao-mamma-hamburg.vercel.app"><strong>🌐 Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="#hero-animation"><strong>🎬 How the hero works</strong></a>
   &nbsp;·&nbsp;
@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  <a href="#deployment"><img src="https://img.shields.io/badge/Vercel-Ready-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Ready for Vercel" /></a>
+  <a href="https://ciao-mamma-hamburg.vercel.app"><img src="https://img.shields.io/badge/Vercel-Live-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live on Vercel" /></a>
   <img src="https://img.shields.io/badge/HTML_·_CSS_·_JS-no_build-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML, CSS and JavaScript, no build" />
   <img src="https://img.shields.io/badge/JavaScript-ES2020-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Playwright-QA-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright QA" />
@@ -42,8 +42,8 @@ Four scenes, three alternating diagonal cuts, one pizza carrying the eye from th
 ## 🎬 The hero animation
 
 <div align="center">
-  <a href="#deployment"><img src=".github/assets/hero-scroll.gif" alt="Scrolling the whole page: the red poster, the pizza landing on the stone table, the ingredients leaving the slice, and the dining room uncovered from the right" width="100%" /></a>
-  <sub>Scroll-driven, top to bottom · captured at 1440 × 900</sub>
+  <a href="https://ciao-mamma-hamburg.vercel.app"><img src=".github/assets/hero-scroll.gif" alt="Scrolling the whole page: the red poster, the pizza landing on the stone table, the ingredients leaving the slice, and the dining room uncovered from the right" width="100%" /></a>
+  <sub>Scroll-driven on the live site, top to bottom · captured at 1440 × 900</sub>
 </div>
 
 <br />
@@ -122,7 +122,7 @@ The poster stays pinned for half a screen, then the story follows the scroll:
 - **CSS custom properties driven by one small script**: scroll positions become a handful of variables (`--e`, `--venue-reveal`, …) and CSS does the drawing
 - **Python image pipeline**: Pillow for crops and WebP, Real-ESRGAN (through spandrel and PyTorch) for the low-resolution real photos and the stone backgrounds
 - **Playwright**: the density gates and interaction checks run in a real browser at real window sizes
-- **Vercel**: static hosting straight from `site/`, every push to `main` deploys once the project is connected
+- **Vercel**: static hosting straight from `site/`, every push to `main` deploys automatically
 
 <br />
 
@@ -208,7 +208,9 @@ Ciao-Mamma-website/
 
 ## 🚀 Deployment
 
-Built for **Vercel** as a static site. The preview has not been published yet; once the project is connected, every push to `main` ships to production.
+Hosted on **Vercel** and connected to this repository: every push to `main` ships to production.
+
+**Live site:** [ciao-mamma-hamburg.vercel.app](https://ciao-mamma-hamburg.vercel.app)
 
 | Setting          | Value                  |
 | :--------------- | :--------------------- |
